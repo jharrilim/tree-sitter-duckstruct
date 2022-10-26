@@ -26,5 +26,14 @@
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.20.7"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.ds",
+      "file-types": [
+        "ds"
+      ],
+      "injection-regex": "^ds$"
+    }
+  ]
 }

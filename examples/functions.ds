@@ -3,3 +3,5 @@ f add(x, y) {
 }
 
 f sub(x, y) = x - y;
+
+let car = f() = "go vroom";

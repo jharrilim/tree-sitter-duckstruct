@@ -5,6 +5,7 @@ module.exports = grammar({
     // TODO: add the actual grammar rules
     source_file: $ => repeat($.statement),
 
+    comment: $ => token(seq('//', /.*/)),
     identifier: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
     number: $ => /[0-9]+/,
     string: $ => /"[^"]*"/,
