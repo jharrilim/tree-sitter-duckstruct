@@ -69,6 +69,21 @@
     "fields": {}
   },
   {
+    "type": "conditionalExpression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "expression",
     "named": true,
     "fields": {},
@@ -90,6 +105,10 @@
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "conditionalExpression",
           "named": true
         },
         {
@@ -363,6 +382,10 @@
     "named": false
   },
   {
+    "type": "else",
+    "named": false
+  },
+  {
     "type": "f",
     "named": false
   },
@@ -373,6 +396,10 @@
   {
     "type": "identifier",
     "named": true
+  },
+  {
+    "type": "if",
+    "named": false
   },
   {
     "type": "let",

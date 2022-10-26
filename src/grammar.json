@@ -283,6 +283,10 @@
         {
           "type": "SYMBOL",
           "name": "unaryExpression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "conditionalExpression"
         }
       ]
     },
@@ -375,7 +379,7 @@
     },
     "unaryExpression": {
       "type": "PREC_LEFT",
-      "value": 1,
+      "value": 2,
       "content": {
         "type": "SEQ",
         "members": [
@@ -391,6 +395,35 @@
                 "value": "-"
               }
             ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
+        ]
+      }
+    },
+    "conditionalExpression": {
+      "type": "PREC_LEFT",
+      "value": 3,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "if"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "else"
           },
           {
             "type": "SYMBOL",
