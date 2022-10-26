@@ -61,6 +61,7 @@ module.exports = grammar({
       $.functionCall,
       $.binaryExpression,
       $.unaryExpression,
+      $.conditionalExpression,
     ),
 
     functionCall: $ => seq(
@@ -88,11 +89,19 @@ module.exports = grammar({
       $.expression,
     )),
 
-    unaryExpression: $ => prec.left(1, seq(
+    unaryExpression: $ => prec.left(2, seq(
       choice(
         '!',
         '-',
       ),
+      $.expression,
+    )),
+
+    conditionalExpression: $ => prec.left(3, seq(
+      'if',
+      $.expression,
+      $.expression,
+      'else',
       $.expression,
     )),
   }
