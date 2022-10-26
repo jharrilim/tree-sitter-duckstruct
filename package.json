@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-duckstruct",
+  "version": "1.0.0",
+  "description": "Tree Sitter parser for the Duckstruct language",
+  "main": "bindings/node",
+  "scripts": {
+    "tree-sitter": "tree-sitter",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jharrilim/tree-sitter-duckstruct.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "duckstruct"
+  ],
+  "author": "Joseph Harrison-Lim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jharrilim/tree-sitter-duckstruct/issues"
+  },
+  "homepage": "https://github.com/jharrilim/tree-sitter-duckstruct#readme",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.7"
+  }
+}
