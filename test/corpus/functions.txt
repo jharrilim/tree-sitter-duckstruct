@@ -1,0 +1,51 @@
+====================
+Function definition
+====================
+
+f add(x, y) {
+  x + y
+}
+
+---
+
+(source_file
+  (statement
+    (functionDeclaration
+      (identifier)
+      (parameterList
+        (parameter
+          (identifier))
+        (parameter
+          (identifier)))
+      (block
+        (statement
+          (expression
+            (binaryExpression
+              (expression
+                (identifier))
+              (expression
+                (identifier)))))))))
+
+===============================
+Function expression definition
+===============================
+
+f add(x, y) = x + y
+
+---
+
+(source_file
+  (statement
+    (functionDeclaration
+      (identifier)
+      (parameterList
+        (parameter
+          (identifier))
+        (parameter
+          (identifier)))
+      (expression
+        (binaryExpression
+          (expression
+            (identifier))
+          (expression
+            (identifier)))))))

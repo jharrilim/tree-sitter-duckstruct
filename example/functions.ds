@@ -1,0 +1,5 @@
+f add(x, y) {
+  x + y
+}
+
+f sub(x, y) = x - y;

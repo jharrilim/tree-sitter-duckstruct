@@ -100,19 +100,36 @@
       ]
     },
     "statement": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "functionDeclaration"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "functionDeclaration"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "assignment"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          ]
         },
         {
-          "type": "SYMBOL",
-          "name": "assignment"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "expression"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": ";"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

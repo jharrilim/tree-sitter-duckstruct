@@ -13,10 +13,13 @@ module.exports = grammar({
     objectLiteral: $ => seq('{{', repeat(seq($.objectLiteralEntry, ',')), '}}'),
     objectLiteralEntry: $ => seq($.identifier, ':', $.expression),
 
-    statement: $ => choice(
-      $.functionDeclaration,
-      $.assignment,
-      $.expression,
+    statement: $ => seq(
+      choice(
+        $.functionDeclaration,
+        $.assignment,
+        $.expression,
+      ),
+      optional(';'),
     ),
     functionDeclaration: $ => seq(
       'f',
